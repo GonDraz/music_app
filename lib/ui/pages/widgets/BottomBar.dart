@@ -1,7 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:mobx/mobx.dart';
+import 'package:music_app/data/apis/apis.dart';
+import 'package:provider/provider.dart';
 
+import '../../../data/repository/repository.dart';
 import '../../../store/home_screen_store.dart';
 import '../../theme/theme.dart';
 
@@ -15,7 +19,8 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  final _homeScreenStore = HomeScreenStore();
+  final _homeScreenStore =
+      HomeScreenStore(classRepository: ClassRepository); //dang bi bug o day
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +82,7 @@ class _BottomBarState extends State<BottomBar> {
                       )),
                   IconButton(
                       onPressed: () {
-                        _homeScreenStore.getApi();
+                        _homeScreenStore?.getApi();
                       },
                       icon: const Icon(Icons.skip_next)),
                 ],

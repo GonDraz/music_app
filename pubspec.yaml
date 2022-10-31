@@ -44,6 +44,7 @@ dependencies:
   build_runner: ^2.3.2
   dio: ^4.0.6
   dependencies: ^0.1.5
+  provider: ^6.0.4
 
 dev_dependencies:
   flutter_test:
