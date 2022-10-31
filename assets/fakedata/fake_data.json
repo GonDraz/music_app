@@ -1,0 +1,74 @@
+{
+  "message": {
+    "status": "Success",
+    "status_code": 200,
+    "text": "Thành Công"
+  },
+  "data": {
+    "home": {
+      "top_charts": [
+        {
+          "thumbnail ": "http://placeimg.com/640/480/abstract",
+          "mane": "Golden age of 80s",
+          "composer": "Sean swadder",
+          "time": "2:34:45"
+        },
+        {
+          "thumbnail ": "http://placeimg.com/640/480/abstract",
+          "mane": "Reggae “n” blues",
+          "composer": "Dj YK mule",
+          "time": "1:02:42"
+        },
+        {
+          "thumbnail ": "http://placeimg.com/640/480/abstract",
+          "mane": "Tomorrow’s tunes",
+          "composer": "Obi Datti",
+          "time": "2:01:25"
+        },
+        {
+          "thumbnail ": "https://i1.sndcdn.com/artworks-ET9IZWJ6QWJOlEw6-axw9WQ-t500x500.jpg",
+          "mane": "Energy.",
+          "composer": "Gondraz",
+          "time": "01:17"
+        }
+      ],
+      "new_releases": [
+        {
+          "thumbnail ": "http://placeimg.com/640/480/business",
+          "mane": "Life in a bubble",
+          "composer": "The van"
+        },
+        {
+          "thumbnail ": "http://placeimg.com/640/480/business",
+          "mane": "Mountain",
+          "composer": "Krisx"
+        },
+        {
+          "thumbnail ": "http://placeimg.com/640/480/business",
+          "mane": "Limits",
+          "composer": "John Dillion"
+        },
+        {
+          "thumbnail ": "http://placeimg.com/640/480/business",
+          "mane": "Everything’s black",
+          "composer": "Ameed"
+        },
+        {
+          "thumbnail ": "http://placeimg.com/640/480/business",
+          "mane": "Cancelled",
+          "composer": "Enimen"
+        },
+        {
+          "thumbnail ": "http://placeimg.com/640/480/business",
+          "mane": "Nomad",
+          "composer": "Makrol eli"
+        },
+        {
+          "thumbnail ": "http://placeimg.com/640/480/business",
+          "mane": "Blind",
+          "composer": "Wiz zee"
+        }
+      ]
+    }
+  }
+}
