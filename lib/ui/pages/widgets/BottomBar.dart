@@ -19,9 +19,6 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  final _homeScreenStore =
-      HomeScreenStore(classRepository: ClassRepository); //dang bi bug o day
-
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -81,10 +78,7 @@ class _BottomBarState extends State<BottomBar> {
                         color: KColors.accept,
                       )),
                   IconButton(
-                      onPressed: () {
-                        _homeScreenStore?.getApi();
-                      },
-                      icon: const Icon(Icons.skip_next)),
+                      onPressed: () {}, icon: const Icon(Icons.skip_next)),
                 ],
               ),
             ],

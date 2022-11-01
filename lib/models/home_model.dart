@@ -45,30 +45,12 @@ class Message {
 }
 
 class Data {
-  Home? home;
-
-  Data({this.home});
-
-  Data.fromJson(Map<String, dynamic> json) {
-    home = json['home'] != null ? new Home.fromJson(json['home']) : null;
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.home != null) {
-      data['home'] = this.home!.toJson();
-    }
-    return data;
-  }
-}
-
-class Home {
   List<TopCharts>? topCharts;
   List<NewReleases>? newReleases;
 
-  Home({this.topCharts, this.newReleases});
+  Data({this.topCharts, this.newReleases});
 
-  Home.fromJson(Map<String, dynamic> json) {
+  Data.fromJson(Map<String, dynamic> json) {
     if (json['top_charts'] != null) {
       topCharts = <TopCharts>[];
       json['top_charts'].forEach((v) {
