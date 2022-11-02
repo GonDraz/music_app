@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'dart:io';
 import 'dart:ui';
 
@@ -6,9 +8,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:music_app/ui/pages/widgets/loading_screen.dart';
 import 'package:music_app/ui/theme/theme.dart';
 
+import '../../../models/home_model.dart';
 import '../../../store/home_screen_store.dart';
 import '../widgets/BottomBar.dart';
 import '../widgets/menu.dart';
+import 'new_releases.dart';
+import 'top_charts.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -34,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return isFirstLoad
-        ? LoadingScreen()
+        ? const LoadingScreen()
         : Scaffold(
             resizeToAvoidBottomInset: false,
             backgroundColor: KColors.background,
@@ -52,15 +57,14 @@ class _HomeScreenState extends State<HomeScreen> {
             body: Stack(
               children: [
                 SingleChildScrollView(
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     child: SafeArea(
                       top: false,
-                      child: Column(children: [
-                        // topCharts(),
-                        const TopPlayList(),
-                        Column(
+                      child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            // topCharts(),
+                            const TopPlayList(),
                             Padding(
                               padding: const EdgeInsets.only(left: 25),
                               child: Text(
@@ -72,30 +76,33 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            Container(
+                            SizedBox(
                               height: 200,
                               child: ListView(
                                   scrollDirection: Axis.horizontal,
                                   children: topCharts()),
                             ),
-                          ],
-                        ),
-                        const NewReleases(),
-                        Container(
-                            color: Colors.red.withOpacity(0.5),
-                            height: 300,
-                            width: double.infinity,
-                            child: const Text("gashaslda")),
-                        Container(
-                            color: const Color.fromARGB(255, 0, 255, 76),
-                            height: 300,
-                            width: double.infinity,
-                            child: const Text("gashaslda")),
-                        const Text("gashaslda"),
-                        Image.network("http://placeimg.com/640/480/nightlife"),
-                        const Text("gashaslda"),
-                        const Text("gashaslda"),
-                      ]),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 25),
+                              child: Text(
+                                "New Releases",
+                                style: TextStyle(
+                                  color: KColors.textWhite,
+                                  fontSize: 20,
+                                  fontFamily: KFonts.quicksand,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 200,
+                              child: ListView(
+                                  scrollDirection: Axis.horizontal,
+                                  children: newReleases()),
+                            ),
+                            SizedBox(
+                              height: 80,
+                            )
+                          ]),
                     )),
                 Container(
                     alignment: Alignment.bottomCenter,
@@ -108,7 +115,17 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> topCharts() {
     return _homeScreenStore.dataHomeScreen!.topCharts!.map((e) {
-      return TopCharts();
+      return TopChartsList(
+        dataTopCharts: e,
+      );
+    }).toList();
+  }
+
+  List<Widget> newReleases() {
+    return _homeScreenStore.dataHomeScreen!.newReleases!.map((e) {
+      return NewReleasesList(
+        dataNewReleases: e,
+      );
     }).toList();
   }
 }
@@ -164,91 +181,5 @@ and so much more""",
             ),
           ],
         ));
-  }
-}
-
-class TopCharts extends StatelessWidget {
-  const TopCharts({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        decoration: BoxDecoration(
-            color: KColors.background, borderRadius: BorderRadius.circular(10)),
-        height: 30,
-        width: 250,
-        child: const Text(
-          "data",
-          style: TextStyle(color: KColors.textWhite),
-        ),
-      ),
-    );
-  }
-}
-
-class NewReleases extends StatelessWidget {
-  const NewReleases({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 25),
-          child: Text(
-            "New releases.",
-            style: TextStyle(
-              color: KColors.textWhite,
-              fontSize: 20,
-              fontFamily: KFonts.quicksand,
-            ),
-          ),
-        ),
-        Container(
-          color: Colors.amber,
-          height: 200,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: KColors.background,
-                      borderRadius: BorderRadius.circular(10)),
-                  height: 30,
-                  width: 250,
-                  child: const Text(
-                    "data",
-                    style: TextStyle(color: KColors.textWhite),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: KColors.background,
-                      borderRadius: BorderRadius.circular(10)),
-                  height: 30,
-                  width: 250,
-                  child: const Text(
-                    "data",
-                    style: TextStyle(color: KColors.textWhite),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
   }
 }

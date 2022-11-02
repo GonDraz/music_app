@@ -9,7 +9,7 @@ class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: KColors.background,
+      backgroundColor: KColors.boxBackground,
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         ListTile(
           leading: const Icon(
