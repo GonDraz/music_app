@@ -49,7 +49,7 @@ class _TopChartsListState extends State<TopChartsList> {
                     ),
                   ),
                   Text(
-                    widget.dataTopCharts!.mane.toString(),
+                    widget.dataTopCharts!.name.toString(),
                     style: TextStyle(color: KColors.textWhite, fontSize: 14),
                   ),
                   Text(

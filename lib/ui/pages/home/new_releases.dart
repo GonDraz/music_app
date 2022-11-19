@@ -32,19 +32,24 @@ class NewReleasesList extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const AlbumScreen()));
+                        builder: (context) => AlbumScreen(
+                              dataNewReleases: dataNewReleases,
+                            )));
                   },
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
-                    child: Image.network(
-                      dataNewReleases!.thumbnail.toString(),
-                      fit: BoxFit.cover,
+                  child: Hero(
+                    tag: "${dataNewReleases!.name}",
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.network(
+                        dataNewReleases!.thumbnail.toString(),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
               ),
               Text(
-                dataNewReleases!.mane.toString(),
+                dataNewReleases!.name.toString(),
                 style: const TextStyle(color: KColors.textWhite, fontSize: 14),
               ),
               Text(

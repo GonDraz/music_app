@@ -79,15 +79,15 @@ class Data {
 
 class TopCharts {
   String? thumbnail;
-  String? mane;
+  String? name;
   String? composer;
   String? time;
 
-  TopCharts({this.thumbnail, this.mane, this.composer, this.time});
+  TopCharts({this.thumbnail, this.name, this.composer, this.time});
 
   TopCharts.fromJson(Map<String, dynamic> json) {
     thumbnail = json['thumbnail '];
-    mane = json['mane'];
+    name = json['name'];
     composer = json['composer'];
     time = json['time'];
   }
@@ -95,7 +95,7 @@ class TopCharts {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['thumbnail '] = this.thumbnail;
-    data['mane'] = this.mane;
+    data['name'] = this.name;
     data['composer'] = this.composer;
     data['time'] = this.time;
     return data;
@@ -104,21 +104,21 @@ class TopCharts {
 
 class NewReleases {
   String? thumbnail;
-  String? mane;
+  String? name;
   String? composer;
 
-  NewReleases({this.thumbnail, this.mane, this.composer});
+  NewReleases({this.thumbnail, this.name, this.composer});
 
   NewReleases.fromJson(Map<String, dynamic> json) {
     thumbnail = json['thumbnail '];
-    mane = json['mane'];
+    name = json['name'];
     composer = json['composer'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['thumbnail '] = this.thumbnail;
-    data['mane'] = this.mane;
+    data['name'] = this.name;
     data['composer'] = this.composer;
     return data;
   }

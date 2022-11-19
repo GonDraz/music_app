@@ -8,25 +8,25 @@
     "top_charts": [
       {
         "thumbnail ": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/9.jpg",
-        "mane": "Golden age of 80s",
+        "name": "Golden age of 80s",
         "composer": "Sean swadder",
         "time": "2:34:45"
       },
       {
         "thumbnail ": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg",
-        "mane": "Reggae “n” blues",
+        "name": "Reggae “n” blues",
         "composer": "Dj YK mule",
         "time": "1:02:42"
       },
       {
         "thumbnail ": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/8.jpg",
-        "mane": "Tomorrow’s tunes",
+        "name": "Tomorrow’s tunes",
         "composer": "Obi Datti",
         "time": "2:01:25"
       },
       {
         "thumbnail ": "https://i1.sndcdn.com/artworks-ET9IZWJ6QWJOlEw6-axw9WQ-t500x500.jpg",
-        "mane": "Energy.",
+        "name": "Energy.",
         "composer": "Gondraz",
         "time": "01:17"
       }
@@ -34,37 +34,37 @@
     "new_releases": [
       {
         "thumbnail ": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/8.jpg",
-        "mane": "Life in a bubble",
+        "name": "Life in a bubble",
         "composer": "The van"
       },
       {
         "thumbnail ": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/323.jpg",
-        "mane": "Mountain",
+        "name": "Mountain",
         "composer": "Krisx"
       },
       {
         "thumbnail ": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/217.jpg",
-        "mane": "Limits",
+        "name": "Limits",
         "composer": "John Dillion"
       },
       {
         "thumbnail ": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/445.jpg",
-        "mane": "Everything’s black",
+        "name": "Everything’s black",
         "composer": "Ameed"
       },
       {
         "thumbnail ": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/748.jpg",
-        "mane": "Cancelled",
+        "name": "Cancelled",
         "composer": "Enimen"
       },
       {
         "thumbnail ": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/738.jpg",
-        "mane": "Nomad",
+        "name": "Nomad",
         "composer": "Makrol eli"
       },
       {
         "thumbnail ": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/78.jpg",
-        "mane": "Blind",
+        "name": "Blind",
         "composer": "Wiz zee"
       }
     ]

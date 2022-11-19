@@ -3,16 +3,13 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../models/home_model.dart';
 import '../../theme/theme.dart';
 
-class AlbumScreen extends StatefulWidget {
-  const AlbumScreen({super.key});
+class AlbumScreen extends StatelessWidget {
+  AlbumScreen({super.key, this.dataNewReleases});
+  NewReleases? dataNewReleases;
 
-  @override
-  State<AlbumScreen> createState() => _AlbumScreenState();
-}
-
-class _AlbumScreenState extends State<AlbumScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,32 +53,33 @@ class _AlbumScreenState extends State<AlbumScreen> {
                 titlePadding: const EdgeInsets.all(0),
                 title: Align(
                   alignment: Alignment.bottomCenter,
+                  // ignore: sort_child_properties_last
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
                     child: Container(
                       height: 180,
                       padding: const EdgeInsets.all(12),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(25),
-                        // child: Hero(
-                        //   tag: "album screen",
-                        child: Image.network(
-                          "http://placeimg.com/640/480/city",
-                          // width: double.maxFinite,
-                          fit: BoxFit.cover,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Hero(
+                          tag: "${dataNewReleases!.name}",
+                          child: Image.network(
+                            dataNewReleases!.thumbnail.toString(),
+                            width: double.maxFinite,
+                            fit: BoxFit.fitWidth,
+                          ),
                         ),
-                        // ),
                       ),
                     ),
                   ),
                 ),
                 background: Container(
                   child: Image.network(
-                    "http://placeimg.com/640/480/city",
-                    fit: BoxFit.fitHeight,
+                    dataNewReleases!.thumbnail.toString(),
+                    fit: BoxFit.cover,
                   ),
                 ),
-                stretchModes: <StretchMode>[
+                stretchModes: const <StretchMode>[
                   // StretchMode.blurBackground,
                   StretchMode.zoomBackground,
                   StretchMode.fadeTitle
