@@ -38,7 +38,7 @@ class _BottomBarState extends State<BottomBar> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(16.4),
                       child: Image.network(
-                          "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1144.jpg"),
+                          "https://i1.sndcdn.com/artworks-ET9IZWJ6QWJOlEw6-axw9WQ-t500x500.jpg"),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 10),
@@ -47,13 +47,13 @@ class _BottomBarState extends State<BottomBar> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           Text(
-                            "data",
+                            "data name music",
                             style: TextStyle(
                                 color: KColors.textWhite,
                                 fontWeight: FontWeight.w800),
                           ),
                           Text(
-                            "hasdgjjg",
+                            "time play",
                             style: TextStyle(
                                 color: KColors.textWhite,
                                 fontWeight: FontWeight.w400),
