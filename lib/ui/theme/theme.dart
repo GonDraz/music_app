@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 class KColors {
   static const background = Color(0xff1D2123);
-  static const boxBackground = Color(0xff1A1E1F);
+  static const boxBackground = Color(0xff33373B);
   static const textNull = Color.fromRGBO(239, 238, 224, 0.25);
   static const accept = Color(0xfffacd66);
   static const textWhite = Color(0xFFFFFFFF);
+  static const nameMusic = Color(0xFFA4C7C6);
 }
 
 class KAssets {

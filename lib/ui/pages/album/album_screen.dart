@@ -73,11 +73,9 @@ class AlbumScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                background: Container(
-                  child: Image.network(
-                    dataNewReleases!.thumbnail.toString(),
-                    fit: BoxFit.cover,
-                  ),
+                background: Image.network(
+                  dataNewReleases!.thumbnail.toString(),
+                  fit: BoxFit.cover,
                 ),
                 stretchModes: const <StretchMode>[
                   // StretchMode.blurBackground,
@@ -89,69 +87,188 @@ class AlbumScreen extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  const SizedBox(
+                  Container(
+                    padding: EdgeInsets.all(14),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          dataNewReleases!.name.toString(),
+                          style: TextStyle(
+                              color: KColors.nameMusic,
+                              fontSize: 35,
+                              fontFamily: KFonts.quicksand,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "data de.....",
+                          style: TextStyle(
+                              color: KColors.textWhite,
+                              fontSize: 16,
+                              fontFamily: KFonts.quicksand),
+                        ),
+                        Text(
+                          "data play list",
+                          style: TextStyle(
+                              color: KColors.textWhite,
+                              fontSize: 16,
+                              fontFamily: KFonts.quicksand),
+                        )
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: KColors.boxBackground,
+                          borderRadius: BorderRadius.circular(32),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 2, right: 12),
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: InkWell(
+                                  onTap: () {
+                                    print("play all");
+                                  },
+                                  child: Icon(Icons.play_circle,
+                                      color: KColors.accept),
+                                ),
+                              ),
+                              Text(
+                                "Play all",
+                                style: TextStyle(color: KColors.textWhite),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: KColors.boxBackground,
+                          borderRadius: BorderRadius.circular(32),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 2, right: 12),
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: InkWell(
+                                  onTap: () {
+                                    print("Add to collection");
+                                  },
+                                  child: Icon(Icons.my_library_add,
+                                      color: KColors.accept),
+                                ),
+                              ),
+                              Text(
+                                "Add to collection",
+                                style: TextStyle(color: KColors.textWhite),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: KColors.boxBackground,
+                          borderRadius: BorderRadius.circular(32),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 2, right: 12),
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: InkWell(
+                                  onTap: () {
+                                    print("Like");
+                                  },
+                                  child: Icon(Icons.favorite,
+                                      color: KColors.accept),
+                                ),
+                              ),
+                              Text(
+                                "Like",
+                                style: TextStyle(color: KColors.textWhite),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
                     height: 100,
                   ),
                   Container(
                     height: 100,
-                    color: Colors.blueGrey,
-                    child: const Text("data"),
+                    width: 100,
+                    color: KColors.boxBackground,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 100,
                   ),
                   Container(
-                    child: const Text("data"),
                     height: 100,
-                    color: Colors.blueGrey,
+                    width: 100,
+                    color: KColors.boxBackground,
                   ),
-                  const SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    child: const Text("data"),
-                    height: 100,
-                    color: Colors.blueGrey,
-                  ),
-                  const SizedBox(
+                  SizedBox(
                     height: 100,
                   ),
                   Container(
-                    child: const Text("data"),
                     height: 100,
-                    color: Colors.blueGrey,
+                    width: 100,
+                    color: KColors.boxBackground,
                   ),
-                  const SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    child: const Text("data"),
-                    height: 100,
-                    color: Colors.blueGrey,
-                  ),
-                  const SizedBox(
+                  SizedBox(
                     height: 100,
                   ),
                   Container(
-                    child: const Text("data"),
                     height: 100,
-                    color: Colors.blueGrey,
+                    width: 100,
+                    color: KColors.boxBackground,
                   ),
-                  const SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    child: const Text("data"),
-                    height: 100,
-                    color: Colors.blueGrey,
-                  ),
-                  const SizedBox(
+                  SizedBox(
                     height: 100,
                   ),
                   Container(
-                    child: const Text("data"),
                     height: 100,
-                    color: Colors.blueGrey,
+                    width: 100,
+                    color: KColors.boxBackground,
+                  ),
+                  SizedBox(
+                    height: 100,
+                  ),
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: KColors.boxBackground,
+                  ),
+                  SizedBox(
+                    height: 100,
+                  ),
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: KColors.boxBackground,
+                  ),
+                  SizedBox(
+                    height: 100,
+                  ),
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: KColors.boxBackground,
+                  ),
+                  SizedBox(
+                    height: 100,
                   ),
                 ],
               ),

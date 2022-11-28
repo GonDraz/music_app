@@ -48,9 +48,13 @@ class NewReleasesList extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
-                dataNewReleases!.name.toString(),
-                style: const TextStyle(color: KColors.textWhite, fontSize: 14),
+              Padding(
+                padding: const EdgeInsets.only(top: 5),
+                child: Text(
+                  dataNewReleases!.name.toString(),
+                  style:
+                      const TextStyle(color: KColors.textWhite, fontSize: 14),
+                ),
               ),
               Text(
                 dataNewReleases!.composer.toString(),
