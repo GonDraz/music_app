@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/ui/pages/home/home_screen.dart';
 import 'package:music_app/ui/pages/my_collections/my_collections_screen.dart';
+import 'package:music_app/ui/pages/profile/profile_screen.dart';
 import 'package:music_app/ui/theme/theme.dart';
 
 class Menu extends StatelessWidget {
@@ -106,6 +107,12 @@ class Menu extends StatelessWidget {
           ),
           onTap: (() {
             print("Profile");
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ProfileScreen(),
+              ),
+            );
           }),
         ),
         ListTile(

@@ -5,9 +5,9 @@ import 'package:mobx/mobx.dart';
 import 'package:music_app/data/apis/apis.dart';
 import 'package:provider/provider.dart';
 
-import '../../../data/repository/repository.dart';
-import '../../../store/home_screen_store.dart';
-import '../../theme/theme.dart';
+import '../../data/repository/repository.dart';
+import '../../store/home_screen_store.dart';
+import '../theme/theme.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({

@@ -5,13 +5,13 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:music_app/ui/pages/widgets/loading_screen.dart';
+import 'package:music_app/ui/widgets/loading_screen.dart';
 import 'package:music_app/ui/theme/theme.dart';
 
 import '../../../models/home_model.dart';
 import '../../../store/home_screen_store.dart';
-import '../widgets/BottomBar.dart';
-import '../widgets/menu.dart';
+import '../../widgets/BottomBar.dart';
+import '../../widgets/menu.dart';
 import 'new_releases.dart';
 import 'top_charts.dart';
 
