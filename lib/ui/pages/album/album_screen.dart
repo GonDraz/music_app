@@ -203,6 +203,14 @@ class AlbumScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Column(
+                    children: [
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                    ],
+                  ),
                   SizedBox(
                     height: 100,
                   ),

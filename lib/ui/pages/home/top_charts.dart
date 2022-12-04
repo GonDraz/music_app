@@ -71,7 +71,6 @@ class _TopChartsListState extends State<TopChartsList> {
                 child: IconButton(
                     onPressed: () {
                       print("favorite click button");
-                      print("");
                     },
                     icon: Icon(
                       Icons.favorite_border_outlined,
