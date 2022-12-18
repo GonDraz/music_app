@@ -209,74 +209,34 @@ class AlbumScreen extends StatelessWidget {
                       Text("data"),
                       Text("data"),
                       Text("data"),
+                      Container(
+                        // padding: EdgeInsets.symmetric(horizontal: 100),
+                        height: 100,
+                        width: 500,
+                        decoration: BoxDecoration(
+                          color: KColors.boxBackground,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                SvgPicture.asset(
+                                    "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/89.jpg"),
+                                Column(
+                                  children: [
+                                    Text("data"),
+                                    Text("data"),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Text("data"),
+                          ],
+                        ),
+                      ),
                     ],
-                  ),
-                  SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: KColors.boxBackground,
-                  ),
-                  SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: KColors.boxBackground,
-                  ),
-                  SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: KColors.boxBackground,
-                  ),
-                  SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: KColors.boxBackground,
-                  ),
-                  SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: KColors.boxBackground,
-                  ),
-                  SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: KColors.boxBackground,
-                  ),
-                  SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: KColors.boxBackground,
-                  ),
-                  SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: KColors.boxBackground,
-                  ),
-                  SizedBox(
-                    height: 100,
                   ),
                 ],
               ),
