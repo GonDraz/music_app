@@ -16,6 +16,7 @@ class KAssets {
 
   static const String logo = '${_icons}logo.svg';
   static const String menu = '${_icons}menu.svg';
+  static const String more = '${_icons}more.svg';
   static const String image1 = '${_images}image1.svg';
   static const String imageAvatar = '${_images}aavataaa.svg';
 }
